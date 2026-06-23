@@ -3,3 +3,6 @@ dist/
 .env
 .env.local
 plan-app-dist.zip
+
+# Skill-builder eval scratch (intermediate test artifacts, not part of the skill)
+.claude/skills/*-workspace/

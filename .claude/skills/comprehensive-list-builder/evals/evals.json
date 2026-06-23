@@ -1,0 +1,22 @@
+{
+  "skill_name": "comprehensive-list-builder",
+  "evals": [
+    {
+      "id": 0,
+      "name": "lifestyle-expense-menu",
+      "prompt": "I'm building a lifestyle cost planner app. Build me a comprehensive menu of every category of monthly expense a household could realistically have, organized so a user filling it out line-by-line wouldn't miss anything. It's going to seed the app's database, so I need it structured.",
+      "expected_output": "A structured, exhaustive, categorized list/menu of household monthly expense categories with adaptive granularity (rich branches expanded, simple ones shallow), long-tail/commonly-forgotten items included, MECE-ish organization, grounded in multiple real taxonomies with sources, in a format suitable for seeding a database (table or clearly nested structure), plus a coverage-confidence note.",
+      "files": [],
+      "assertions": [
+        "Covers all major spending domains (housing, utilities, transportation, food, healthcare, insurance, debt/loans, personal care, dependents/childcare, entertainment, savings/investments, taxes & fees)",
+        "Uses a clear hierarchy (top-level categories with subcategories/items), not a flat undifferentiated list",
+        "Shows adaptive granularity: some branches expanded into many specific items while others stay shallow (a lopsided tree, not uniform depth)",
+        "Includes at least 6 commonly-forgotten/long-tail items (e.g. subscriptions, HOA/strata fees, pet costs, bank/card fees, tolls/parking, gifts, annual renewals, medical copays, storage units, professional dues)",
+        "Explicitly marks or distinguishes common vs. long-tail / typical vs. occasional items so essentials can be separated from the tail",
+        "Cites at least 2 external sources or named taxonomies (e.g. BLS Consumer Expenditure categories, budgeting templates, comparison sites)",
+        "Provides a database-ready structured form (CSV or markdown table) with consistent fields suitable for seeding the app",
+        "Ends with an explicit coverage-confidence note stating where coverage is strong vs. thin (residual risk)"
+      ]
+    }
+  ]
+}

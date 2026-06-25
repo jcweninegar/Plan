@@ -162,6 +162,19 @@ Match the format to the use case (confirm if unsure):
   `source`. Good when the list becomes app data — e.g. seeding the lifestyle planner.
 - **Both** when the user wants to read it *and* use it programmatically.
 
+**When the list will seed an app or database, don't stop at name + category.** The thing that
+makes a list *usable* downstream is per-item attributes the app can actually branch on, so
+think about what dimensions the consuming software needs and give each item those tags. For a
+spending/planner taxonomy, the high-value ones are: **frequency** (monthly / quarterly /
+annual / variable — so the app can amortize a yearly cost into a monthly sinking fund),
+**fixed vs. variable**, **essential vs. discretionary**, and **prevalence** (common vs. long-
+tail). Generalize the *idea* — ask "what would the software need to know about each item to
+treat them differently?" — rather than copying these exact columns into every domain. And
+when the destination is a real database, offering a normalized form (e.g. a parent/child
+schema as JSON, or a SQL seed file with the categories and items as separate related tables)
+is often more directly useful than a flat CSV — match it to how the data will actually be
+stored.
+
 Whatever the format, make the **hierarchy explicit** and **mark long-tail vs. common** items
 so the consumer can collapse to essentials or expand to exhaustive as needed. Always end with
 a brief note on coverage confidence and known thin spots.
